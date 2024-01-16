@@ -1,2 +1,3 @@
 yolov7_training.pt
-runs/*
+runs/
+sporophytes/
