@@ -10,7 +10,7 @@ parser.add_argument("seed", default = None, nargs = "?", help = "seed for random
 
 args = parser.parse_args()
 
-seed = args.seed
+seed = int(args.seed)
 
 source_dir = join("sporophytes", "all")
 source_dir_img = join(source_dir, "images")
