@@ -15,7 +15,7 @@ To train the base model,
 
 ``wget https://github.com/WongKinYiu/yolov7/releases/download/v0.1/yolov7_training.pt ``
 
-2. Extract training data into folder 'sporophytes'
+2. Extract training data from https://github.com/dave-quesadilla/yolov7-kelp-training/releases/download/v0.1.0/sporophytes.zip into folder 'sporophytes'
 
 3. Train model 
 ``python yolov7/train.py --device 0 --cfg yolov7-sporophyte.yaml --weights yolov7_training.pt --data sporophyte-dataset.yaml --hyp yolov7/data/hyp.scratch.custom.yaml --name yolov7-sporophyte --epochs 600``
@@ -23,7 +23,7 @@ To train the base model,
 For other models use train_aux.py. Other steps are similar. 
 
 ## Testing
-Depending on which run you want to use,
+Download our model from https://github.com/dave-quesadilla/yolov7-kelp-training/releases/download/v0.1.0/yolov7-sporophyte.pt or use your own. 
 
 ``python yolov7/test.py --data sporophyte-dataset.yaml --img 640 --batch 32 --conf 0.001 --iou 0.65 --device 0 --weights yolov7-sporophyte.pt --name yolov7-sporophyte-640-val &> yolov7-sporophyte-test.txt``
 
